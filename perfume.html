@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product preview card component</title>
+    <link rel="stylesheet" href="pf-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700&family=Montserrat:ital,wght@0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d6d9dbeb85.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <img
+          src="./images/image-product-desktop.jpg"
+          alt="perfume"
+          id="main-img"
+        />
+        <div class="main">
+          <div class="row">
+            <p class="perfume">PERFUME</p>
+          </div>
+          <div class="row">
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+          </div>
+          <div class="row">
+            <p class="justify">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+          </div>
+          <div class="prices row">
+            <span class="price-1">$149.99</span>
+            <span class="price-2"><s>$169.99</s></span>
+          </div>
+          <div class="row">
+            <button>
+              <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const mainImg = document.getElementById("main-img");
+      let screenWidth = window.innerWidth;
+      if (screenWidth < 1200) {
+        mainImg.src = "./images/image-product-mobile.jpg";
+      } else {
+        mainImg.src =
+          "https://savvystrider-bucket.s3.us-east-2.amazonaws.com/image-product-desktop.jpg";
+      }
+    </script>
+  </body>
+</html>
